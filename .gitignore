@@ -1,0 +1,73 @@
+# compiled output
+/dist
+/node_modules
+nodemon.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# User-specific files
+/.bash_history
+/.gitconfig
+/.lesshst
+/.portugol/
+/.viminfo
+/3D Objects/
+/AppData/
+/Contacts/
+/Documents/
+/Downloads/
+/Favorites/
+/IntelGraphicsProfiles/
+/Links/
+/Music/
+/NTUSER.DAT
+/NTUSER.DAT{234ac62c-ac6b-11ef-8a42-d868c66fb0c1}.TM.blf
+/NTUSER.DAT{234ac62c-ac6b-11ef-8a42-d868c66fb0c1}.TMContainer00000000000000000001.regtrans-ms
+/NTUSER.DAT{234ac62c-ac6b-11ef-8a42-d868c66fb0c1}.TMContainer00000000000000000002.regtrans-ms
+/OneDrive/
+/Teste de digitação/
+/Pictures/
+/Saved Games/
+/Searches/
+/Videos/
+/aula_git/
+/ntuser.dat.LOG1
+/ntuser.dat.LOG2
+/ntuser.ini
+/Insomnia.lnk
+/MySQLWorkbench - Shortcut.lnk 
+/OIP.jfif 
+/SpringToolSuite4 - Shortcut.lnk 
+/Visual Studio Code.lnk 
+/desktop.ini
+/TypeScript/
