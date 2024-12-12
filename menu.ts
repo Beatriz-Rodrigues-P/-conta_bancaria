@@ -1,21 +1,43 @@
 import readlinesync=require("readline-sync")
 import {colors} from "./src/util/cores"
 import {Conta} from "./src/model/conta"
+import { contacorrente } from "./src/model/contacorrente";
+import { contapoupanca } from "./src/model/contapoupanca";
 
 export function main(){
 
     let opcao:number
 
+    //Sacar
     const c1=new Conta(1, 123, 1, "Jonas", 2000000);
     c1.visualizar()
     console.log(c1.sacar(100.00))
     c1.visualizar()
 
-    const c2=new Conta(2, 234, 2, "Andressa", 1000000);
+    //Depositar
+    const c2=new Conta(2, 234, 2, "Adrielly", 1000000);
     c2.visualizar()
     c2.depositar(100.00)
     c2.visualizar()
-    
+
+    //Conta corrente
+    const cc1=new contacorrente(3, 789, 1,"Andressa", 100000, 1000);
+    cc1.visualizar();
+
+    //Sacar conta corrente
+    cc1.sacar(100500);
+    cc1.visualizar();
+
+    //Conta poupança
+    const cp1=new contapoupanca(21, 4, 456, 2, "Luna", 25000)
+    cp1.visualizar()
+
+    //Depositar na poupança
+    cp1.depositar(1500);
+    cp1.visualizar()
+
+    console.log("");
+
     while(true){
         
         //Menu
@@ -56,7 +78,7 @@ export function main(){
                 console.log(colors.fg.white, "Listar as contas inseridas")
                 keyPress()
                 break
-            case 3:
+            case 3: 
                 console.log(colors.fg.white, "Buscar uma conta no sistema")
                 keyPress()
                 break
