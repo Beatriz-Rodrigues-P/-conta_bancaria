@@ -1,6 +1,6 @@
 import { isNumberObject } from "util/types"
 
-export class Conta{
+export abstract class Conta{
 
     //Modelo de dados
     private _numero: number;
