@@ -3,10 +3,16 @@ import {colors} from "./src/util/cores"
 import {Conta} from "./src/model/conta"
 import { contacorrente } from "./src/model/contacorrente";
 import { contapoupanca } from "./src/model/contapoupanca";
+import { contacontroller } from "./src/Controller/contacontroller";
 
 export function main(){
 
-    let opcao:number
+    let opcao, agencia, numero, tipo, saldo, limite, aniversario:number
+    let titular: string;
+    const tipocontas= ["Conta corrente", "Conta poupança"];
+
+    //Criando um objeto da classe contacontroller
+    const contas = new contacontroller();
 
     //Conta corrente
     const cc1=new contacorrente(3, 789, 1,"Andressa", 100000, 1000);
@@ -60,6 +66,31 @@ export function main(){
         switch(opcao){
             case 1:
                 console.log(colors.fg.white, "Criar uma conta")
+                    
+                    console.log("Digite o número da agência: ");
+                    agencia=readlinesync.questionInt("");
+
+                    console.log("Digite o nome do titular: ");
+                    titular=readlinesync.question("");
+
+                    console.log("Escolha o tipo da conta: ");
+                    tipo=readlinesync.keyInSelect(tipocontas, "", {cancel:false})+1;
+                
+                    console.log("Digite o saldo da conta: ");
+                    saldo=readlinesync.questionFloat("");
+
+                    switch(tipo){
+                        case 1:
+                            console.log("Digite o limite da conta: ");
+                            limite=readlinesync.questionFloat("");
+                            contas.cadastrar(new contacorrente(0, agencia, tipo, titular, saldo, limite))
+                        break
+                        case 2:
+                            console.log("Digite o dia do aniversario da poupança: ");
+                            aniversario=readlinesync.questionInt("");
+                            contas.cadastrar(new contapoupanca(0, agencia, tipo, titular, saldo, aniversario))
+                        break
+                    }
                 keyPress()
                 break
             case 2:
