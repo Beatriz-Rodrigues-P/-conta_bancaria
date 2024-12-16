@@ -1,4 +1,4 @@
-import { Conta } from "../src/model/conta";
+import { Conta } from "../model/conta";
 
 export interface contarepository{
 
@@ -7,7 +7,8 @@ export interface contarepository{
     listartodas():void;
     cadastrar(conta:Conta):void;
     atualizar(conta:Conta):void;
-    deletar(conta:Conta):void;
+    deletar(numero:number):void;
+    procurartitular(titular:string):void;
 
     sacar(numero: number, valor:number):void;
     depositar(numero:number, valor:number):void;
