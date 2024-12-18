@@ -15,12 +15,12 @@ export function main(){
     const contas = new contacontroller();
 
     //Novas Instâncias da Classe ContaCorrente (Objetos)
-    contas.cadastrar(new contacorrente(contas.gerarNumero(), 1234, 1, 'Amanda Magro', 1000000.00, 100000.00));
-    contas.cadastrar(new contacorrente(contas.gerarNumero(), 4578, 1, 'João da Silva', 1000.00, 100.00));
+    contas.cadastrar(new contacorrente(contas.gerarNumero(), 1234, 1, 'Amanda Magro', 10000.00, 1000.00));
+    contas.cadastrar(new contacorrente(contas.gerarNumero(), 5678, 1, 'João da Silva', 1000.00, 100.00));
     
     // Novas Instâncias da Classe ContaPoupança (Objetos)
-    contas.cadastrar(new contapoupanca(contas.gerarNumero(), 5789, 2, 10000, "Gabriel", 10));
-    contas.cadastrar(new contapoupanca(contas.gerarNumero(), 5698, 2, 15000, "Julia", 15));
+    contas.cadastrar(new contapoupanca(contas.gerarNumero(), 29, 9876, 1, "Gabriel", 23000));
+    contas.cadastrar(new contapoupanca(contas.gerarNumero(), 15, 5432, 1, "Julia", 10000));
 
     //Conta corrente
     const cc1=new contacorrente(3, 789, 1,"Andressa", 100000, 1000);
